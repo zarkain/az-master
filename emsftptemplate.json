@@ -29,6 +29,18 @@
         "description": "Name of existing file share to be mounted"
       }
     },
+    "sftpContainer": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of Container"
+      }
+    },
+		"sftpGroupName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of Container Group Name"
+      }
+    },
     "sftpUser": {
       "type": "string",
       "metadata": {
