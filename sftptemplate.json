@@ -53,9 +53,8 @@
         }
     },
     "variables": {
-	"existingStorageAccountResourceGroupName": "EMSFTPRG",
-	"existingStorageAccountName": "EMSFTPRG",
-	"existingStorageAccountName": "emsftpstoraccnt",  
+	"existingStorageAccountResourceGroupName": 'EMSFTPRG',
+	"existingStorageAccountName": 'emsftpstoraccnt',  
         "sftpContainerName": "[parameters('sftpContainer')]",
         "sftpContainerGroupName": "[parameters('sftpGroupName')]",
         "sftpContainerImage": "atmoz/sftp:latest",
