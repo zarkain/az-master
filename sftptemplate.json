@@ -2,6 +2,20 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+	"existingStorageAccountResourceGroupName": {
+            "type": "string",
+	    "defaultValue": "EMSFTPRG",	
+            "metadata": {
+                "description": "Resource group for existing storage account"
+            }
+        },
+        "existingStorageAccountName": {
+            "type": "string",
+            "defaultValue": "emsftpstoraccnt",
+            "metadata": {
+                "description": "Name of existing storage account"
+            }
+        },    
         "existingFileShareName": {
             "type": "string",
             "metadata": {
@@ -41,9 +55,7 @@
         }
     },
     "variables": {
-	"existingStorageAccountResourceGroupName": "EMSFTPRG",
-	"existingStorageAccountName": "emsftpstoraccnt",  
-        "sftpContainerName": "[parameters('sftpContainer')]",
+	"sftpContainerName": "[parameters('sftpContainer')]",
         "sftpContainerGroupName": "[parameters('sftpGroupName')]",
         "sftpContainerImage": "atmoz/sftp:latest",
         "sftpEnvVariable": "[concat(parameters('sftpUser'), ':', parameters('sftpPassword'), ':1001')]",
